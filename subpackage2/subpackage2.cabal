@@ -2,9 +2,9 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 83680a2992f934957173553ae5e78ace6999f5994ef610bfeca285b59a81c3df
+-- hash: 4e6c8d85e03b6809466ea620a46f6022a523275bcf87881fa9e717360b4d7bb2
 
-name:           ddump-splices-test
+name:           subpackage2
 version:        0.1.0.0
 description:    Please see the README on Github at <https://github.com/githubuser/ddump-splices-test#readme>
 homepage:       https://github.com/githubuser/ddump-splices-test#readme
@@ -25,14 +25,14 @@ source-repository head
   type: git
   location: https://github.com/githubuser/ddump-splices-test
 
-executable ddump-splices-test-exe
-  main-is: Main.hs
+library
   hs-source-dirs:
-      app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+      src
   build-depends:
       base >=4.7 && <5
-    , subpackage2
+    , subpackage1
+  exposed-modules:
+      Subpackage2Lib
   other-modules:
-      Paths_ddump_splices_test
+      Paths_subpackage2
   default-language: Haskell2010

@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Subpackage2Lib (someFunc)
 
 main :: IO ()
 main = someFunc
